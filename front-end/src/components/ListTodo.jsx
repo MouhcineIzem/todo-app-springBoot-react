@@ -5,7 +5,7 @@ const ListTodo = () => {
     const [todos, setTodos] = useState([]);
 
     useEffect(() => {
-        axios.get('localhost:8000/api/todos')
+        axios.get('http://localhost:8000/api/items')
             .then(response => setTodos(response.data))
             .catch(error => console.log(error));
     }, []);
